@@ -71,3 +71,78 @@ footer {
   color: white;
   font-size: 14px;
 }
+/* Naviqasiya paneli */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 15px 30px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #66b3ff;
+}
+
+/* Haqqımızda bölməsi */
+.about {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about h1 {
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Komanda hissəsi */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+  color: #003366;
+}
