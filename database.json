@@ -1,0 +1,22 @@
+const fs = require("fs");
+const dbPath = "./database.json";
+
+app.post("/contact", (req, res) => {
+  const { name, email, message } = req.body;
+  const newMessage = {
+    name,
+    email,
+    message,
+    date: new Date().toISOString(),
+  };
+
+  // Mövcud məlumatları oxuyuruq
+  const data = JSON.parse(fs.readFileSync(dbPath, "utf-8"));
+  data.messages.push(newMessage);
+
+  // Yenilənmiş məlumatları yazırıq
+  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+
+  console.log("Yeni mesaj bazaya əlavə olundu:", newMessage);
+  res.json({ success: true, message: "Mesajınız uğurla göndərildi!" });
+});
